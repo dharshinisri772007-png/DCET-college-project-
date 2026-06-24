@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DCET</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f8ff;
+overflow-x:hidden;
+}
+
+/*================ NAVBAR =================*/
+
+header{
+position:fixed;
+top:0;
+left:0;
+height: 90px;
+width:100%;
+background:#003366;
+padding:15px 60px;
+z-index:999;
+box-shadow:0 4px 20px rgba(0,0,0,.15);
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:35px;
+font-weight:bold;
+color:white;
+letter-spacing:1px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:30px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-size:20px;
+transition:.4s;
+font-weight:500;
+}
+
+nav ul li a:hover{
+color:#00d4ff;
+}
+
+
+/*================ HERO TEXT =================*/
+
+.hero{
+
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:rgb(255, 255, 255);
+z-index:10;
+
+}
+
+.hero h1{
+
+font-size:65px;
+margin-bottom:20px;
+animation:fadeUp 1.5s;
+
+}
+
+.hero p{
+
+font-size:22px;
+max-width:900px;
+line-height:1.8;
+margin:auto;
+animation:fadeUp 2s;
+
+}
+
+.hero a{
+
+display:inline-block;
+margin-top:35px;
+padding:15px 35px;
+background:#00bfff;
+color:rgb(220, 125, 125);
+text-decoration:none;
+border-radius:50px;
+font-size:18px;
+transition:.4s;
+
+}
+
+.hero a:hover{
+
+background:white;
+color:#003366;
+transform:translateY(-5px);
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/*================ TITLE =================*/
+
+.section-title{
+
+font-size:42px;
+text-align:center;
+color:#003366;
+margin:80px 0 40px;
+
+}
+
+/*================ ABOUT =================*/
+
+.about{
+
+display:flex;
+align-items:center;
+justify-content:center;
+gap:50px;
+padding:60px;
+flex-wrap:wrap;
+
+}
+
+.about-image{
+
+flex:1;
+min-width:350px;
+
+}
+
+.about-image img{
+
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+transition:.5s;
+
+}
+
+.about-image img:hover{
+
+transform:scale(1.04);
+
+}
+
+.about-text{
+
+flex:1;
+min-width:350px;
+
+}
+
+.about-text h2{
+
+color:#003366;
+margin-bottom:20px;
+font-size:38px;
+
+}
+
+.about-text p{
+
+font-size:18px;
+line-height:1.9;
+text-align:justify;
+color:#444;
+
+}
+
+/*================ WHY CHOOSE =================*/
+
+.choose{
+
+padding:70px;
+
+}
+
+.choose-box{
+
+display:flex;
+align-items:center;
+background:white;
+margin-bottom:25px;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+
+}
+
+.choose-box:hover{
+
+transform:translateX(15px);
+background:#003366;
+color:white;
+
+}
+
+.choose-box span{
+
+font-size:45px;
+margin-right:25px;
+
+}
+
+.choose-box h3{
+
+margin-bottom:8px;
+
+}
+
+/*================ SCROLL =================*/
+
+.hidden{
+
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+/*================ RESPONSIVE =================*/
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.about{
+padding:30px;
+}
+
+header{
+padding:15px 25px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+DCET
+</div>
+
+    <ul>
+        <li><a href="college app.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="admission.html">Admissions</a></li>
+        <li><a href="department.html">Departments</a></li>
+        <li><a href="placement.html">Placements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+</nav>
+
+</header>
+
+<style>
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* SLIDER CONTAINER */
+.slider{
+    width:100%;
+    height:90vh;
+    position:relative;
+    overflow:hidden;
+}
+
+/* SINGLE SLIDE */
+.slide{
+    width:100%;
+    height: 600px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+/* IMAGE */
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(60%);
+}
+
+/* CONTENT */
+.content{
+    position:absolute;
+    top:50%;
+    left:10%;
+    transform:translateY(-50%);
+    color:white;
+    max-width:600px;
+}
+
+.content h1{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.content p{
+    font-size:18px;
+    line-height:1.5;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#ffcc00;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+}
+.department-section {
+  position: relative;
+  text-align: center;
+}
+
+.dept-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.dept-text {
+  position: absolute;
+  bottom: 20px; /* Adjust this value to move text slightly above the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #0b3d91; /* Navy blue for clarity */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+</style>
+
+<!-- SLIDER -->
+<div class="slider">
+
+    <!-- SINGLE FIXED SLIDE -->
+    <div class="slide">
+
+      "<img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=1600" alt="Department">
+
+    </div>
+
+</div>
+
+<div class="hero">
+
+<h1>Departments of Excellence</h1>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h1 class="section-title hidden">
+
+Our Academic Departments
+
+</h1>
+
+<div class="about hidden">
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900">
+
+</div>
+
+<div class="about-text">
+
+<h2>Empowering Future Engineers</h2>
+
+<p>
+
+DCET offers a wide range of engineering departments designed to provide students with quality education, practical exposure, innovation, and research opportunities. Every department is equipped with state-of-the-art laboratories, smart classrooms, experienced faculty members, and strong industry collaborations. Students are encouraged to participate in projects, internships, technical workshops, seminars, and industrial visits to become future-ready professionals capable of solving real-world engineering challenges.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WHY -->
+
+<section class="choose">
+
+<h1 class="section-title hidden">
+
+Why Choose Our Departments?
+
+</h1>
+
+<div class="choose-box hidden">
+
+<span>🏫</span>
+
+<div>
+
+<h3>Modern Infrastructure</h3>
+
+<p>Advanced laboratories, smart classrooms and digital learning facilities.</p>
+
+</div>
+
+</div>
+
+<div class="choose-box hidden">
+
+<span>👨‍🏫</span>
+
+<div>
+
+<h3>Experienced Faculty</h3>
+
+<p>Highly qualified professors with strong academic and industrial expertise.</p>
+
+</div>
+
+</div>
+
+<div class="choose-box hidden">
+
+<span>💼</span>
+
+<div>
+
+<h3>Excellent Placements</h3>
+
+<p>Top recruiters visit every year offering excellent career opportunities.</p>
+
+</div>
+
+</div>
+
+<div class="choose-box hidden">
+
+<span>🔬</span>
+
+<div>
+
+<h3>Research & Innovation</h3>
+
+<p>Innovation labs, funded projects and startup incubation support.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+      DEPARTMENTS SECTION
+=========================== -->
+
+<style>
+
+/* Department Grid */
+
+.department-section{
+    padding:80px 50px;
+    background:#eef5ff;
+}
+
+.department-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+    margin-top:40px;
+}
+
+.department-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+    transition:.5s;
+    position:relative;
+}
+
+.department-card:hover{
+    transform:translateY(-15px) rotateX(5deg);
+    box-shadow:0 25px 40px rgba(0,0,0,.18);
+}
+
+.department-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.department-card:hover img{
+    transform:scale(1.08);
+}
+
+.department-content{
+    padding:25px;
+}
+
+.department-content h3{
+    color:#003366;
+    margin-bottom:10px;
+}
+
+.department-content p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.department-btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:#003366;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.4s;
+}
+
+.department-btn:hover{
+    background:#00a8ff;
+}
+
+/* Statistics */
+
+.stats-section{
+    padding:80px 50px;
+    background:white;
+}
+
+.stats-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.stat-box{
+    text-align:center;
+    background:#003366;
+    color:white;
+    padding:40px;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.stat-box:hover{
+    transform:scale(1.05);
+    background:#0055aa;
+}
+
+.stat-box h1{
+    font-size:55px;
+}
+
+.stat-box p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* Labs */
+
+.lab-section{
+    padding:80px 50px;
+    background:#eef6ff;
+}
+
+.lab-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.lab-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.5s;
+}
+
+.lab-card:hover{
+    transform:translateY(-12px);
+}
+
+.lab-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.lab-content{
+    padding:20px;
+}
+
+.lab-content h3{
+    color:#003366;
+    margin-bottom:10px;
+}
+
+.lab-content p{
+    color:#555;
+    line-height:1.6;
+}
+
+</style>
+
+
+<section class="department-section">
+
+<h1 class="section-title hidden">
+Our Departments
+</h1>
+
+<div class="department-container">
+
+<div class="department-card hidden">
+<img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800">
+<div class="department-content">
+<h3>Computer Science & Engineering</h3>
+<p>Programming, AI, Cloud Computing, Cyber Security and Software Development.</p>
+<a href="#" class="department-btn">Explore</a>
+</div>
+</div>
+
+<div class="department-card hidden">
+<img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800">
+<div class="department-content">
+<h3>Artificial Intelligence & Data Science</h3>
+<p>Machine Learning, Deep Learning, Data Analytics and Intelligent Systems.</p>
+<a href="#" class="department-btn">Explore</a>
+</div>
+</div>
+
+<div class="department-card hidden">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800">
+<div class="department-content">
+<h3>Information Technology</h3>
+<p>Networking, Database Management, Web Technologies and Cloud Computing.</p>
+<a href="#" class="department-btn">Explore</a>
+</div>
+</div>
+
+<div class="department-card hidden">
+<img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=800">
+<div class="department-content">
+<h3>Electronics & Communication</h3>
+<p>Embedded Systems, VLSI, Communication Networks and IoT.</p>
+<a href="#" class="department-btn">Explore</a>
+</div>
+</div>
+
+<div class="department-card hidden">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800">
+<div class="department-content">
+<h3>Electrical & Electronics</h3>
+<p>Power Systems, Renewable Energy, Automation and Smart Grids.</p>
+<a href="#" class="department-btn">Explore</a>
+</div>
+</div>
+
+<div class="department-card hidden">
+<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=800">
+<div class="department-content">
+<h3>Mechanical Engineering</h3>
+<p>Design Engineering, Manufacturing, Robotics and Thermal Engineering.</p>
+<a href="#" class="department-btn">Explore</a>
+</div>
+</div>
+
+<div class="department-card hidden">
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800">
+<div class="department-content">
+<h3>Civil Engineering</h3>
+<p>Structural Engineering, Surveying, Construction Management and Transportation.</p>
+<a href="#" class="department-btn">Explore</a>
+</div>
+</div>
+
+<div class="department-card hidden">
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800">
+<div class="department-content">
+<h3>Chemical Engineering</h3>
+<p>Process Engineering, Industrial Chemistry and Environmental Technology.</p>
+<a href="#" class="department-btn">Explore</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="stats-section">
+
+<h1 class="section-title hidden">
+Department Highlights
+</h1>
+
+<div class="stats-container">
+
+<div class="stat-box hidden">
+<h1>08</h1>
+<p>Departments</p>
+</div>
+
+<div class="stat-box hidden">
+<h1>150+</h1>
+<p>Faculty Members</p>
+</div>
+
+<div class="stat-box hidden">
+<h1>35+</h1>
+<p>Modern Laboratories</p>
+</div>
+
+<div class="stat-box hidden">
+<h1>5000+</h1>
+<p>Students</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="lab-section">
+
+<h1 class="section-title hidden">
+Research Laboratories
+</h1>
+
+<div class="lab-container">
+
+<div class="lab-card hidden">
+<img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800">
+<div class="lab-content">
+<h3>Innovation Lab</h3>
+<p>Modern research facilities encouraging innovation and startup development.</p>
+</div>
+</div>
+
+<div class="lab-card hidden">
+<img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800">
+<div class="lab-content">
+<h3>Research Centre</h3>
+<p>Advanced laboratories supporting research projects and publications.</p>
+</div>
+</div>
+
+<div class="lab-card hidden">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800">
+<div class="lab-content">
+<h3>Computer Laboratory</h3>
+<p>High-performance computing facilities with the latest software tools.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+<!-- ===========================
+      PART 3
+=========================== -->
+
+<style>
+
+/*================ FACILITIES =================*/
+
+.facilities{
+    padding:80px 50px;
+    background:#ffffff;
+}
+
+.facility-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.facility-card{
+    background:#f8fbff;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+    transition:.5s;
+}
+
+.facility-card:hover{
+    transform:translateY(-12px);
+    background:#003366;
+    color:white;
+}
+
+.facility-card span{
+    font-size:55px;
+}
+
+.facility-card h3{
+    margin:20px 0 15px;
+    color:#003366;
+}
+
+.facility-card:hover h3{
+    color:white;
+}
+
+/*================ PROJECTS =================*/
+
+.projects{
+    padding:80px 50px;
+    background:#eef6ff;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.project-card{
+    overflow:hidden;
+    border-radius:20px;
+    background:white;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    transition:.5s;
+}
+
+.project-card:hover{
+    transform:translateY(-15px);
+}
+
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.project-card:hover img{
+    transform:scale(1.08);
+}
+
+.project-content{
+    padding:25px;
+}
+
+.project-content h3{
+    color:#003366;
+    margin-bottom:12px;
+}
+
+.project-content p{
+    line-height:1.7;
+    color:#555;
+}
+
+/*================ TIMELINE =================*/
+
+.timeline{
+    padding:80px 50px;
+    background:white;
+    position:relative;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    width:4px;
+    top:150px;
+    bottom:50px;
+    background:#003366;
+}
+
+.timeline-item{
+    width:45%;
+    padding:20px;
+    margin-bottom:40px;
+    background:#eef6ff;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+    position:relative;
+}
+
+.timeline-item:nth-child(odd){
+    margin-right:auto;
+}
+
+.timeline-item:nth-child(even){
+    margin-left:auto;
+}
+
+.timeline-item h3{
+    color:#003366;
+}
+
+/*================ LOGO SLIDER =================*/
+
+.logo-slider{
+    background:#eef6ff;
+    overflow:hidden;
+    padding:50px 0;
+}
+
+.logo-track{
+    display:flex;
+    width:calc(220px * 16);
+    animation:scroll 25s linear infinite;
+}
+
+.logo-track img{
+    width:170px;
+    height:80px;
+    object-fit:contain;
+    margin:0 25px;
+    filter:grayscale(100%);
+    transition:.4s;
+}
+
+.logo-track img:hover{
+    filter:grayscale(0%);
+    transform:scale(1.15);
+}
+
+@keyframes scroll{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(calc(-220px * 8));
+}
+
+}
+
+</style>
+
+<h1 class="section-title">Our Recruiters</h1>
+
+<section class="logo-slider">
+    <div class="logo-track">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" alt="HP">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" alt="Cisco">
+        <img src="tcs.jpg"alt="TCS Logo">
+        <img src="hcl.jpg" alt="HCLTech">
+</section>
+<style>
+    .logo-slider {
+    overflow: hidden;
+    background: #f8fafc;
+    padding: 50px 0;
+    position: relative;
+}
+
+/* Fade edges (premium look) */
+.logo-slider::before,
+.logo-slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+}
+
+.logo-slider::before {
+    left: 0;
+    background: linear-gradient(to right, #ace6ff, transparent);
+}
+
+.logo-slider::after {
+    right: 0;
+    background: linear-gradient(to left, #ace6ff, transparent);
+}
+
+.logo-track {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+.logo-track img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: 0.4s ease;
+}
+
+.logo-track img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.2);
+}
+
+/* Smooth infinite scroll */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on hover (important UX upgrade) */
+.logo-slider:hover .logo-track {
+    animation-play-state: paused;
+}
+</style>
+
+
+
+<!-- ================= FACILITIES ================= -->
+
+<section class="facilities">
+
+<h1 class="section-title hidden">
+Campus Facilities
+</h1>
+
+<div class="facility-grid">
+
+<div class="facility-card hidden">
+<span>💻</span>
+<h3>Smart Classrooms</h3>
+<p>Interactive digital classrooms equipped with projectors and smart boards.</p>
+</div>
+
+<div class="facility-card hidden">
+<span>📚</span>
+<h3>Central Library</h3>
+<p>Thousands of books, journals, e-resources and digital learning materials.</p>
+</div>
+
+<div class="facility-card hidden">
+<span>🚌</span>
+<h3>Transport</h3>
+<p>College buses covering nearby cities with safe transportation facilities.</p>
+</div>
+
+<div class="facility-card hidden">
+<span>🏀</span>
+<h3>Sports Complex</h3>
+<p>Indoor and outdoor sports facilities with professional coaching.</p>
+</div>
+
+<div class="facility-card hidden">
+<span>🏡</span>
+<h3>Hostel</h3>
+<p>Comfortable hostel accommodation with Wi-Fi and dining facilities.</p>
+</div>
+
+<div class="facility-card hidden">
+<span>🌐</span>
+<h3>Wi-Fi Campus</h3>
+<p>High-speed internet connectivity across the entire campus.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="projects">
+
+<h1 class="section-title hidden">
+Student Innovation Projects
+</h1>
+
+<div class="project-grid">
+
+<div class="project-card hidden">
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900">
+
+<div class="project-content">
+
+<h3>AI Powered Robot</h3>
+
+<p>
+Students developed an intelligent robot capable of object detection,
+voice recognition and autonomous navigation.
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card hidden">
+
+<img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=900">
+
+<div class="project-content">
+
+<h3>Smart Agriculture System</h3>
+
+<p>
+IoT based farming system for automatic irrigation and crop monitoring.
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card hidden">
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900">
+
+<div class="project-content">
+
+<h3>Cyber Security Lab</h3>
+
+<p>
+Students work on ethical hacking, network security and cloud security projects.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+    .timeline-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* center line */
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background: #38bdf8;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* CARD */
+.timeline-card {
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s forwards;
+}
+
+.timeline-card .content {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: 0.4s;
+}
+
+/* hover glow */
+.timeline-card .content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #38bdf8;
+}
+
+/* left side */
+.timeline-card.left {
+    left: 0;
+    text-align: right;
+    animation-delay: 0.2s;
+}
+
+/* right side */
+.timeline-card.right {
+    left: 50%;
+    text-align: left;
+    animation-delay: 0.4s;
+}
+
+/* year badge */
+.year {
+    display: inline-block;
+    padding: 5px 12px;
+    background: #38bdf8;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* animation */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 10px;
+    }
+
+    .timeline-card {
+        width: 100%;
+        padding-left: 40px;
+    }
+
+    .timeline-card.left,
+    .timeline-card.right {
+        left: 0;
+        text-align: left;
+    }
+}
+
+/* container */
+.social-icons{
+    display:flex;
+    gap:18px;
+}
+
+/* circular buttons */
+.social-icons a{
+    width:50px;
+    height:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(255,255,255,0.08);
+    border-radius:50%;
+    
+    color:white;
+    font-size:20px;
+    text-decoration:none;
+
+    transition:0.3s;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* hover effect */
+.social-icons a:hover{
+    transform:translateY(-5px) scale(1.1);
+    background:#00e5ff;
+    color:#001018;
+}
+</style>
+
+<script>
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".hidden").forEach(el=>observer.observe(el));
+
+</script>
+<!-- FOOTER -->
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- College Info -->
+        <div class="footer-column">
+            <h2>DCET</h2>
+
+            <p>
+                dharshini College of Engineering and Technology empowers
+                students through innovation, excellence in education, discipline 
+                and professional growth.
+            </p>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div class="social-icons">
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+</div>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h2>Quick Links</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#admission">admission</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#placements">Placements</a></li>
+        <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h2>Contact</h2>
+
+            <p>Chennai, Tamil Nadu</p>
+            <p>+91 98765 43210</p>
+            <p>info@dcet.edu.in</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Dharshini College of Engineering and Technology.
+        All Rights Reserved.
+    </div>
+</footer>
+
+<style>
+   /* ==========================
+   FOOTER
+========================== */
+
+.footer{
+    background: linear-gradient(135deg,#001f3f,#003366);
+    color:#fff;
+    padding:60px 8% 20px;
+    margin-top:60px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:50px;
+}
+
+/* Columns */
+.footer-column{
+    flex:1;
+    min-width:250px;
+}
+
+/* Left column */
+.footer-column:first-child{
+    text-align:left;
+}
+
+/* Center column */
+.footer-column:nth-child(2){
+    text-align:center;
+}
+
+/* Right column */
+.footer-column:last-child{
+    text-align:right;
+}
+
+.footer-column h2{
+    font-size:24px;
+    margin-bottom:20px;
+    color:#00c6ff;
+}
+
+.footer-column p{
+    font-size:16px;
+    line-height:1.8;
+    color:#ddd;
+}
+
+/* Quick Links */
+.footer-column ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer-column ul li{
+    margin:12px 0;
+}
+
+.footer-column ul li a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+    font-size:16px;
+}
+
+.footer-column ul li a:hover{
+    color:#00c6ff;
+    padding-left:8px;
+}
+
+/* Contact */
+.footer-column:last-child p{
+    margin:12px 0;
+}
+
+/* Social Icons */
+.social-icons{
+    margin-top:25px;
+}
+
+.social-icons a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    margin-right:12px;
+    border-radius:50%;
+    background:rgba(255,255,255,.12);
+    color:#fff;
+    text-decoration:none;
+    font-size:20px;
+    transition:.4s;
+}
+
+.social-icons a:hover{
+    background:#00c6ff;
+    color:#001f3f;
+    transform:translateY(-8px) rotate(360deg);
+}
+
+/* Bottom */
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.15);
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    font-size:15px;
+    color:#bbb;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:900px){
+
+.footer-container{
+    flex-direction:column;
+    text-align:center;
+}
+
+.footer-column,
+.footer-column:first-child,
+.footer-column:nth-child(2),
+.footer-column:last-child{
+    text-align:center;
+}
+
+.social-icons{
+    justify-content:center;
+}
+
+.social-icons a{
+    margin:8px;
+}
+
+}
+</style>
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+<script>
+
+// COUNTER ANIMATION
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+    counter.innerText = "0";
+
+    const updateCounter = () => {
+        const target = +counter.getAttribute("data-target");
+        const current = +counter.innerText;
+
+        const increment = target / 100;
+
+        if(current < target){
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCounter, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCounter();
+});
+
+// BACK TO TOP
+let topBtn = document.getElementById("topBtn");
+
+window.onscroll = function(){
+    if(document.documentElement.scrollTop > 200){
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+};
+
+topBtn.onclick = function(){
+    window.scrollTo({top:0, behavior:"smooth"});
+};
+
+// DARK MODE
+let darkToggle = document.getElementById("darkToggle");
+
+darkToggle.onclick = function(){
+    document.body.classList.toggle("dark");
+};
+
+// MOBILE NAV (enhanced toggle example)
+function toggleMenu(){
+    document.querySelector(".nav-links").classList.toggle("active");
+}
+
+</script>
+</body>
+</html>

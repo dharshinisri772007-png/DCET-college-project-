@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Contact Page</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f8ff;
+    color:#ffffff;
+}
+
+/*========================
+ NAVBAR
+========================*/
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    height: 90px;
+    width:100%;
+    padding:18px 8%;
+    background:#003366;
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    color:#fff;
+    font-size:35px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-size:20px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#4ea5ff;
+}
+
+.slide {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* IMAGE */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* DARK OVERLAY */
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* TEXT CONTENT */
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.slide-content h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.slide-content p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* BUTTON */
+.slide-content button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: #ffcc00;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/*========================
+ TITLE
+========================*/
+
+.title{
+    text-align:center;
+    color:#0d47a1;
+    font-size:40px;
+    margin-top:80px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-top:15px;
+    margin-bottom:50px;
+}
+
+/*========================
+ HELP SECTION
+========================*/
+
+.help-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    padding-bottom:80px;
+}
+
+.help-card{
+    background:#3e85cd;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.help-card i{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:#eaf2ff;
+    color:#0d6efd;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    font-size:35px;
+    margin-bottom:20px;
+    transition:.4s;
+}
+
+.help-card:hover i{
+    background:rgb(255, 255, 255);
+}
+
+.help-card h3{
+    margin-bottom:15px;
+}
+
+.help-card p{
+    line-height:1.8;
+}
+
+.hidden{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(60px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+nav{
+padding:15px 5%;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+ <h2>DCET</h2>
+
+    <ul>
+        <li><a href="college app.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="admission.html">Admissions</a></li>
+        <li><a href="department.html">Departments</a></li>
+        <li><a href="placement.html">Placements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+    <!-- SLIDER -->
+<div class="slider">
+
+    <!-- SINGLE FIXED SLIDE -->
+    <div class="slide">
+
+      "<img src="form.jpg" alt="Department">
+
+    </div>
+
+</div>
+
+<div class="hero-content">
+
+<h1>Contact Our College</h1>
+
+<p>
+
+We are always ready to assist students, parents,
+recruiters and visitors. Contact us for admissions,
+placements, academic support and general enquiries.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="help">
+
+<h2 class="title hidden">How Can We Help You?</h2>
+
+<p class="subtitle hidden">
+Choose any service below and our team will guide you.
+</p>
+
+<div class="help-container">
+
+<div class="help-card hidden">
+<i class="fas fa-user-graduate"></i>
+<h3>Admissions 🎓</h3>
+<p>Get admission guidance, eligibility details, scholarships and application support.</p>
+</div>
+
+<div class="help-card hidden">
+<i class="fas fa-book-open"></i>
+<h3>Academics 📚</h3>
+<p>Know about departments, faculty, laboratories, curriculum and academic facilities.</p>
+</div>
+
+<div class="help-card hidden">
+<i class="fas fa-briefcase"></i>
+<h3>Placements 💼</h3>
+<p>Placement training, internships, campus recruitment and career guidance.</p>
+</div>
+
+<div class="help-card hidden">
+<i class="fas fa-headset"></i>
+<h3>Student Support 🤝</h3>
+<p>Our support team is available to answer all your questions quickly.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+      CONTACT INFORMATION
+========================= -->
+
+<section class="contact-section">
+
+<h2 class="title hidden">Contact Information</h2>
+<p class="subtitle hidden">
+Feel free to contact us anytime. Our team is always ready to help you.
+</p>
+
+<div class="contact-wrapper">
+
+<div class="contact-card hidden">
+
+<div class="contact-item">
+<div class="icon">
+<i class="fas fa-map-marker-alt"></i>
+</div>
+<div>
+<h3>Address</h3>
+<p>
+DCET College of Engineering<br>
+chennai, Tamil Nadu - 625001
+</p>
+</div>
+</div>
+
+<hr>
+
+<div class="contact-item">
+<div class="icon">
+<i class="fas fa-phone"></i>
+</div>
+<div>
+<h3>Phone</h3>
+<p>
++91 98765 43210<br>
++91 91234 56789
+</p>
+</div>
+</div>
+
+<hr>
+
+<div class="contact-item">
+<div class="icon">
+<i class="fas fa-envelope"></i>
+</div>
+<div>
+<h3>Email</h3>
+<p>
+info@dcetcollege.edu.in<br>
+admission@dectcollege.edu.in
+</p>
+</div>
+</div>
+
+<hr>
+
+<div class="contact-item">
+<div class="icon">
+<i class="fas fa-clock"></i>
+</div>
+<div>
+<h3>Office Hours</h3>
+<p>
+Monday - Saturday<br>
+9:00 AM - 6:00 PM
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+      ENQUIRY FORM
+========================= -->
+
+<section class="enquiry-section">
+
+<h2 class="title hidden">Send an Enquiry</h2>
+
+<p class="subtitle hidden">
+Fill in the details below and our admission team will contact you shortly.
+</p>
+
+<div class="form-box hidden">
+
+<form id="enquiryForm">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<select required>
+<option value="">Select Course</option>
+<option>B.E Computer Science</option>
+<option>B.E Artificial Intelligence</option>
+<option>B.E Electronics</option>
+<option>B.E Mechanical</option>
+<option>B.Tech Information Technology</option>
+<option>B.E civil</option>
+<option>B.E chemical</option>
+</select>
+
+<textarea rows="5" placeholder="Your Message" required></textarea>
+
+<button type="submit">Submit Enquiry</button>
+
+</form>
+
+</div>
+
+</section>
+
+<style>
+
+/*==========================
+CONTACT SECTION
+==========================*/
+
+.contact-section{
+padding:90px 8%;
+background:#eef5ff;
+}
+
+.contact-wrapper{
+display:flex;
+justify-content:center;
+}
+
+.contact-card{
+width:100%;
+max-width:650px;
+background:#fff;
+border-radius:20px;
+padding:35px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.contact-item{
+display:flex;
+align-items:flex-start;
+gap:20px;
+padding:18px 0;
+}
+
+.contact-item .icon{
+width:60px;
+height:60px;
+background:#0d6efd;
+color:#fff;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+flex-shrink:0;
+}
+
+.contact-item h3{
+margin-bottom:8px;
+color:#0d47a1;
+}
+
+.contact-item p{
+line-height:1.8;
+color:#555;
+}
+
+.contact-card hr{
+border:none;
+height:1px;
+background:#ddd;
+}
+
+/*==========================
+ENQUIRY FORM
+==========================*/
+
+.enquiry-section{
+padding:90px 8%;
+}
+
+.form-box{
+max-width:700px;
+margin:auto;
+background:#fff;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+}
+
+.form-box form{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea{
+
+padding:15px;
+font-size:16px;
+border:1px solid #ccc;
+border-radius:10px;
+outline:none;
+transition:.3s;
+
+}
+
+.form-box input:focus,
+.form-box select:focus,
+.form-box textarea:focus{
+
+border-color:#0d6efd;
+
+}
+
+.form-box button{
+
+padding:15px;
+background:#0d6efd;
+color:white;
+border:none;
+font-size:17px;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.form-box button:hover{
+
+background:#003ea8;
+transform:translateY(-3px);
+
+}
+
+@media(max-width:768px){
+
+.contact-card{
+padding:25px;
+}
+
+.contact-item{
+flex-direction:column;
+text-align:center;
+align-items:center;
+}
+
+.form-box{
+padding:25px;
+}
+
+}
+
+</style>
+
+<script>
+
+document.getElementById("enquiryForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("✅ Thank you! Your enquiry has been submitted successfully.");
+
+this.reset();
+
+});
+
+</script>
+
+<!-- =========================
+        FAQ SECTION
+========================= -->
+
+<section class="faq-section">
+
+    <h2 class="title hidden">Frequently Asked Questions</h2>
+
+    <p class="subtitle hidden">
+        Find answers to the most common questions.
+    </p>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+            <div class="faq-question">
+                What is the admission process?
+                <span>▶</span>
+            </div>
+            <div class="faq-answer">
+                Students can apply online, submit required documents and attend counselling.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Does the college provide hostel facilities?
+                <span>▶</span>
+            </div>
+            <div class="faq-answer">
+                Yes. Separate hostels are available for boys and girls with modern facilities.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Are placement opportunities available?
+                <span>▶</span>
+            </div>
+            <div class="faq-answer">
+                Yes. The Placement Cell conducts training, internships and campus recruitment every year.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How can I contact the admission office?
+                <span>▶</span>
+            </div>
+            <div class="faq-answer">
+                You can call us, send an email or submit the enquiry form available above.
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+        LOCATION
+========================= -->
+
+<section class="location-section">
+
+    <h2 class="title hidden">Our Location</h2>
+
+    <p class="subtitle hidden">
+        Visit our campus.
+    </p>
+
+    <div class="map-box hidden">
+
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.2!2d78.1198!3d9.9252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c57d6f2dbe2f%3A0x5fca0e1b7b2c8e18!2sMadurai!5e0!3m2!1sen!2sin!4v1710000000000"
+        width="100%"
+        height="400"
+        style="border:0;"
+        loading="lazy"
+        allowfullscreen>
+
+        </iframe>
+
+    </div>
+
+</section>
+
+<!-- =========================
+        FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-box">
+
+<h2>DCET</h2>
+
+<p>
+Providing quality education, innovation and career opportunities
+to build tomorrow's leaders.
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Quick Links</h3>
+
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Departments</a>
+<a href="#">Admissions</a>
+<a href="#">Contact</a>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Contact</h3>
+
+<p><i class="fas fa-phone"></i> +91 98765 43210</p>
+
+<p><i class="fas fa-envelope"></i> info@dcetcollege.edu.in</p>
+
+<p><i class="fas fa-map-marker-alt"></i> chennai, Tamil Nadu</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Follow Us</h3>
+
+<div class="social-icons">
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+</div>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+© 2026 DCET College. All Rights Reserved.
+</p>
+
+</footer>
+
+<button id="topBtn">
+<i class="fas fa-arrow-up"></i>
+</button>
+
+<style>
+
+/* FAQ */
+.faq-section{
+padding:80px 8%;
+background:#f7fbff;
+}
+
+.faq-container{
+max-width:900px;
+margin:auto;
+}
+
+.faq-item{
+background:rgb(255, 255, 255);
+margin-bottom:18px;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.faq-question{
+padding:18px 22px;
+font-weight:600;
+cursor:pointer;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:#000000;
+}
+
+.faq-answer{
+display:none;
+padding:20px;
+border-top:1px solid #eee;
+line-height:1.8;
+color:#000000;
+}
+
+/* MAP */
+
+.location-section{
+padding:80px 8%;
+}
+
+.map-box{
+max-width:1100px;
+margin:auto;
+overflow:hidden;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+/* FOOTER */
+
+footer{
+background:#003366;
+color:white;
+padding:60px 8% 20px;
+margin-top:80px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+}
+
+.footer-box h2,
+.footer-box h3{
+margin-bottom:18px;
+}
+
+.footer-box p,
+.footer-box a{
+display:block;
+color:#ddd;
+text-decoration:none;
+margin:10px 0;
+transition:.3s;
+}
+
+.footer-box a:hover{
+color:#4da3ff;
+padding-left:5px;
+}
+
+.social-icons{
+display:flex;
+gap:15px;
+margin-top:15px;
+}
+
+.social-icons a{
+width:45px;
+height:45px;
+border-radius:50%;
+background:#0d6efd;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+font-size:18px;
+transition:.3s;
+}
+
+.social-icons a:hover{
+transform:translateY(-5px);
+background:#4da3ff;
+}
+
+footer hr{
+margin:35px 0 20px;
+border:none;
+height:1px;
+background:#334;
+}
+
+.copyright{
+text-align:center;
+color:#bbb;
+}
+
+/* Scroll Button */
+
+#topBtn{
+position:fixed;
+bottom:25px;
+right:25px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#0d6efd;
+color:white;
+cursor:pointer;
+display:none;
+font-size:18px;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+#topBtn:hover{
+background:#003ea8;
+}
+
+</style>
+
+<script>
+
+/* FAQ */
+
+document.querySelectorAll(".faq-question").forEach(question=>{
+
+question.addEventListener("click",()=>{
+
+let answer=question.nextElementSibling;
+
+answer.style.display=
+answer.style.display==="block"?"none":"block";
+
+});
+
+});
+
+/* Scroll Button */
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>300){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+</script>
+
+<script>
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>

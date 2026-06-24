@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCET Admissions 2026</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+/* ==========================
+   RESET
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background:#ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px #ffffff;
+    z-index: 1000;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 70px;   /* adjust based on your navbar */
+    z-index: 1000;
+}
+nav .logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #003366;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #003366;
+      font-size: 25px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #0ce6df;
+}
+
+#themeBtn {
+    border: none;
+    background:#0ce6df;
+    color: rgb(234, 11, 11);
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* ==========================
+   SLIDER (FIXED - NO ANIMATION BUG)
+========================== */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slider {
+    margin-top: 70px;  /* SAME as navbar height */
+}
+/* EACH SLIDE */
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    transition: opacity 0.1s ease;
+}
+
+/* ACTIVE SLIDE */
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* IMAGE */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CAPTION */
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(9, 9, 9);
+    max-width: 700px;
+    z-index: 2;
+}
+
+.caption h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.caption p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+.apply-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #4690e5;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 600;
+}
+
+.apply-btn:hover {
+    background: #312e81;
+}
+
+/* SECTION TITLE */
+.section-title {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: #4f46e5;
+}
+
+.section-title p {
+    color: #666;
+    font-size: 16px;
+}
+/* ==========================
+   SECTION TITLE
+========================== */
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#4f46e5;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#666;
+    font-size:17px;
+}
+
+/* ==========================
+   GENERAL SECTION
+========================== */
+section{
+    padding:90px 8%;
+}
+
+/* ==========================
+   ADMISSION PROCESS
+========================== */
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.step{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.step:hover{
+    transform:translateY(-10px);
+}
+
+.step h3{
+    width:70px;
+    height:70px;
+    background:#4f46e5;
+    color:white;
+    border-radius:50%;
+    margin:auto;
+    line-height:70px;
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.step h4{
+    color:#4f46e5;
+    margin-bottom:15px;
+}
+
+/* ==========================
+   COURSES
+========================== */
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.course-card{
+    background:white;
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.course-card:hover{
+    transform:translateY(-10px);
+}
+
+.course-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.course-card:hover img{
+    transform:scale(1.08);
+}
+
+.course-content{
+    padding:25px;
+}
+
+.course-content h3{
+    color:#4f46e5;
+    margin-bottom:15px;
+}
+
+.course-content p{
+    color:#666;
+    margin-bottom:10px;
+}
+
+/* ==========================
+   ELIGIBILITY
+========================== */
+.eligibility-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.eligibility-box ul{
+    padding-left:25px;
+}
+
+.eligibility-box li{
+    margin-bottom:18px;
+    font-size:17px;
+    color:#555;
+}
+
+/* ==========================
+   IMPORTANT DATES
+========================== */
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+th{
+    background:#4f46e5;
+    color:white;
+    padding:18px;
+}
+
+td{
+    padding:18px;
+    text-align:center;
+    background:white;
+    border-bottom:1px solid #eee;
+}
+
+tr:hover td{
+    background:#f2f3ff;
+}
+
+/* ==========================
+   SCHOLARSHIPS
+========================== */
+.scholar-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.scholar-card{
+    background:white;
+    padding:35px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.scholar-card:hover{
+    transform:translateY(-10px);
+}
+
+.scholar-card i{
+    font-size:45px;
+    color:#4f46e5;
+    margin-bottom:20px;
+}
+
+.scholar-card h3{
+    margin-bottom:15px;
+    color:#4f46e5;
+}
+
+/* ==========================
+   COUNTERS
+========================== */
+.counter-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.counter-box{
+    background:white;
+    text-align:center;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.counter-box h3{
+    font-size:45px;
+    color:#4f46e5;
+    margin-bottom:10px;
+}
+
+.counter-box p{
+    color:#666;
+}
+
+/* ==========================
+   FORM
+========================== */
+#admissionForm{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:45px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+}
+
+textarea{
+    resize:none;
+    height:130px;
+}
+
+.submit-btn{
+    width:100%;
+    border:none;
+    padding:15px;
+    background:#4f46e5;
+    color:white;
+    font-size:17px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.submit-btn:hover{
+    background:#312e81;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.footer {
+  background: #00264d;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  color: #ffcc00;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  margin-bottom: 15px;
+  color: #ffcc00;
+}
+
+.footer-col p {
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 8px 0;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffcc00;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85em;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 10px;
+}
+/* ==========================
+   SCROLL ANIMATION
+========================== */
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+    }
+
+    .caption h1{
+        font-size:42px;
+    }
+
+    .caption p{
+        font-size:17px;
+    }
+}
+
+@media(max-width:600px){
+
+    .caption{
+        left:5%;
+        right:5%;
+    }
+
+    .caption h1{
+        font-size:32px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    section{
+        padding:70px 6%;
+    }
+
+    #admissionForm{
+        padding:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PART 1 COMPLETE -->
+
+<!-- NEXT RESPONSE:
+PART 2 = Hero Slider HTML + Admission Process + Courses + Eligibility + Important Dates + Scholarships + Counters -->
+<!-- ==========================
+     NAVBAR
+========================== -->
+<nav>
+    <div class="logo">DCET</div>
+
+    <ul>
+        <li><a href="college app.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="admission.html">Admissions</a></li>
+        <li><a href="department.html">Departments</a></li>
+        <li><a href="placement.html">Placements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+         
+    </ul>
+
+</nav>
+<!-- ==========================
+     HERO SLIDER
+========================== -->
+<section class="slider">
+
+    <div class="slide">
+        <img src="dcet.png"alt="Campus Infrastructure">
+    </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     ADMISSION PROCESS
+========================== -->
+<section class="reveal">
+
+    <div class="section-title">
+        <h2>Admission Process</h2>
+
+        <p>
+            Follow these simple steps to secure your admission.
+        </p>
+    </div>
+
+    <div class="process-grid">
+
+        <div class="step">
+            <h3>1</h3>
+
+            <h4>Registration</h4>
+
+            <p>
+                Complete the online application form with
+                accurate personal and academic details.
+            </p>
+        </div>
+
+        <div class="step">
+            <h3>2</h3>
+
+            <h4>Document Verification</h4>
+
+            <p>
+                Submit required certificates for verification
+                and eligibility confirmation.
+            </p>
+        </div>
+
+        <div class="step">
+            <h3>3</h3>
+
+            <h4>Counselling</h4>
+
+            <p>
+                Choose your preferred department based on
+                availability and eligibility.
+            </p>
+        </div>
+
+        <div class="step">
+            <h3>4</h3>
+
+            <h4>Fee Payment</h4>
+
+            <p>
+                Pay the admission fee and confirm your seat.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     COURSES OFFERED
+========================== -->
+<section id="courses" class="reveal">
+
+    <div class="section-title">
+
+        <h2>Courses Offered</h2>
+
+        <p>
+            Explore our diverse undergraduate programmes.
+        </p>
+
+    </div>
+
+    <div class="course-grid">
+
+        <!-- CSE -->
+        <div class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800"
+                 alt="Computer Science">
+
+            <div class="course-content">
+
+                <h3>B.E. Computer Science Engineering</h3>
+
+                <p><strong>Duration:</strong> 4 Years</p>
+
+                <p><strong>Intake:</strong> 120 Seats</p>
+
+                <p>
+                    Specializations include AI,
+                    Machine Learning, Full Stack Development,
+                    and Data Science.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- IT -->
+        <div class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800"
+                 alt="Information Technology">
+
+            <div class="course-content">
+
+                <h3>B.Tech Information Technology</h3>
+
+                <p><strong>Duration:</strong> 4 Years</p>
+
+                <p><strong>Intake:</strong> 60 Seats</p>
+
+                <p>
+                    Focus on Cloud Computing,
+                    Networking, Cybersecurity,
+                    and Database Systems.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ECE -->
+        <div class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800"
+                 alt="Electronics">
+
+            <div class="course-content">
+
+                <h3>B.E. Electronics & Communication</h3>
+
+                <p><strong>Duration:</strong> 4 Years</p>
+
+                <p><strong>Intake:</strong> 60 Seats</p>
+
+                <p>
+                    Study Embedded Systems,
+                    VLSI Design, IoT,
+                    and Communication Technologies.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Mechanical -->
+        <div class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800"
+                 alt="Mechanical">
+
+            <div class="course-content">
+
+                <h3>B.E. Mechanical Engineering</h3>
+
+                <p><strong>Duration:</strong> 4 Years</p>
+
+                <p><strong>Intake:</strong> 60 Seats</p>
+
+                <p>
+                    Learn Robotics, CAD/CAM,
+                    Thermal Engineering,
+                    and Manufacturing Technology.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Civil -->
+        <div class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800"
+                 alt="Civil">
+
+            <div class="course-content">
+
+                <h3>B.E. Civil Engineering</h3>
+
+                <p><strong>Duration:</strong> 4 Years</p>
+
+                <p><strong>Intake:</strong> 60 Seats</p>
+
+                <p>
+                    Gain expertise in Structural Engineering,
+                    Surveying, Transportation,
+                    and Construction Management.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- EEE -->
+        <div class="course-card">
+
+            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800"
+                 alt="Electrical">
+
+            <div class="course-content">
+
+                <h3>B.E. Electrical & Electronics</h3>
+
+                <p><strong>Duration:</strong> 4 Years</p>
+
+                <p><strong>Intake:</strong> 60 Seats</p>
+
+                <p>
+                    Explore Power Systems,
+                    Electrical Machines,
+                    and Renewable Energy Technologies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     ELIGIBILITY CRITERIA
+========================== -->
+<section class="reveal">
+
+    <div class="section-title">
+
+        <h2>Eligibility Criteria</h2>
+
+        <p>
+            Ensure you meet the following requirements.
+        </p>
+
+    </div>
+
+    <div class="eligibility-box">
+
+        <ul>
+
+            <li>
+                 Candidates should have passed
+                Higher Secondary Examination (10+2).
+            </li>
+
+            <li>
+                 Physics, Chemistry, and Mathematics
+                are compulsory subjects.
+            </li>
+
+            <li>
+               Admission through counselling or
+                management quota as per norms.
+            </li>
+
+            <li>
+                Original mark sheets and certificates
+                must be produced during admission.
+            </li>
+
+            <li>
+                Community certificate and transfer
+                certificate should be submitted.
+            </li>
+
+            <li>
+                Students awaiting results may apply
+                provisionally.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     IMPORTANT DATES
+========================== -->
+<section class="reveal">
+
+    <div class="section-title">
+
+        <h2>Important Dates</h2>
+
+        <p>
+            Stay updated with the admission schedule.
+        </p>
+
+    </div>
+
+    <table>
+
+        <tr>
+            <th>Event</th>
+            <th>Date</th>
+        </tr>
+
+        <tr>
+            <td>Application Opens</td>
+            <td>01 June 2026</td>
+        </tr>
+
+        <tr>
+            <td>Last Date for Application</td>
+            <td>31 July 2026</td>
+        </tr>
+
+        <tr>
+            <td>Certificate Verification</td>
+            <td>05 August 2026</td>
+        </tr>
+
+        <tr>
+            <td>Counselling Process</td>
+            <td>10 August 2026</td>
+        </tr>
+
+        <tr>
+            <td>Fee Payment Deadline</td>
+            <td>20 August 2026</td>
+        </tr>
+
+        <tr>
+            <td>Commencement of Classes</td>
+            <td>01 September 2026</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<!-- ==========================
+     SCHOLARSHIPS
+========================== -->
+<section class="reveal">
+
+    <div class="section-title">
+
+        <h2>Scholarships</h2>
+
+        <p>
+            Scholarships are offered to support deserving and meritorious students 
+            in achieving their academic goals.Financial assistance is provided based 
+            on academic performance, sports achievements, and social background.
+        </p>
+
+    </div>
+
+    <div class="scholar-grid">
+
+        <div class="scholar-card">
+
+            <i class="fas fa-award"></i>
+
+            <h3>Merit Scholarship</h3>
+
+            <p>
+                Offered to students with outstanding
+                academic performance.
+            </p>
+
+        </div>
+
+        <div class="scholar-card">
+
+    <i class="fas fa-user-graduate"></i>
+
+    <h3>First Graduate Scholarship</h3>
+
+    <p>
+        Provided to students who are the first in their family
+        to pursue higher education.
+    </p>
+
+   </div>
+
+        <div class="scholar-card">
+
+            <i class="fas fa-graduation-cap"></i>
+
+            <h3>Government Scholarship</h3>
+
+            <p>
+                Scholarships available as per
+                government eligibility criteria.
+            </p>
+
+        </div>
+
+        <div class="scholar-card">
+
+            <i class="fas fa-medal"></i>
+
+            <h3>Sports Scholarship</h3>
+
+            <p>
+                Support for students who excel
+                in sports and athletics.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     COUNTERS
+========================== -->
+<section class="reveal">
+
+    <div class="section-title">
+
+        <h2>DCET at a Glance</h2>
+
+        <p>
+           Our achievements speak for themselves, showcasing our dedication 
+            to academic excellence and continuous improvement With experienced 
+                faculty and modern facilities, we ensure high-quality education and career readiness.
+        </p>
+
+    </div>
+
+    <div class="counter-grid">
+
+        <div class="counter-box">
+            <h3 class="counter" data-target="1200">0</h3>
+            <p>Students</p>
+        </div>
+
+        <div class="counter-box">
+            <h3 class="counter" data-target="150">0</h3>
+            <p>Faculty Members</p>
+        </div>
+
+        <div class="counter-box">
+            <h3 class="counter" data-target="95">0</h3>
+            <p>Placement Rate (%)</p>
+        </div>
+
+        <div class="counter-box">
+            <h3 class="counter" data-target="20">0</h3>
+            <p>Recruiting Companies</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PART 2 COMPLETE -->
+
+<!-- NEXT RESPONSE:
+PART 3 = Admission Form + Footer + Full JavaScript (Slider, Scroll Reveal, Counters, Form Validation) + Closing </body></html> -->  
+<!-- ==========================
+     ADMISSION FORM
+========================== -->
+<section id="apply" class="reveal">
+
+    <div class="section-title">
+        <h2>Apply for Admission</h2>
+        <p>Fill the form below to start your admission process</p>
+    </div>
+
+    <form id="admissionForm">
+
+        <div class="form-group">
+            <input type="text" id="name" placeholder="Full Name" required>
+        </div>
+
+        <div class="form-group">
+            <input type="email" id="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="form-group">
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+        </div>
+
+        <div class="form-group">
+            <select id="dept" required>
+                <option value="">Select Department</option>
+                <option>CSE</option>
+                <option>IT</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>Civil</option>
+                <option>Mechanical</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <textarea id="message" placeholder="Your Message"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Application</button>
+
+    </form>
+
+</section>
+
+<!-- ==========================
+     FOOTER
+========================== -->
+
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- College Info -->
+        <div class="footer-column">
+            <h2>DCET</h2>
+
+            <p>
+                dharshini College of Engineering and Technology empowers
+                students through innovation, excellence in education, discipline 
+                and professional growth.
+            </p>
+<div class="social-icons">
+    <!-- Instagram -->
+    <a href="instagram://app"
+       onclick="window.open('https://www.instagram.com','_blank')">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="linkedin://"
+       onclick="window.open('https://www.linkedin.com','_blank')">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="vnd.youtube://"
+       onclick="window.open('https://www.youtube.com','_blank')">
+        <i class="fab fa-youtube"></i>
+    </a>
+    <!-- Twitter (X) -->
+<a href="twitter://"
+   onclick="window.open('https://twitter.com','_blank')">
+    <i class="fab fa-twitter"></i>
+</a>
+
+<!-- Facebook -->
+<a href="fb://"
+   onclick="window.open('https://www.facebook.com','_blank')">
+    <i class="fab fa-facebook"></i>
+</a>
+</div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h2>Quick Links</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#admission">admission</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#placements">Placements</a></li>
+        <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h2>Contact</h2>
+
+            <p>Chennai, Tamil Nadu</p>
+            <p>+91 98765 43210</p>
+            <p>info@dcet.edu.in</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Dharshini College of Engineering and Technology.
+        All Rights Reserved.
+    </div>
+</footer>
+
+<style>
+ /* ==========================
+   FOOTER
+========================== */
+
+.footer{
+    background: linear-gradient(135deg,#001f3f,#003366);
+    color:#fff;
+    padding:60px 8% 20px;
+    margin-top:60px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:50px;
+}
+
+/* Columns */
+.footer-column{
+    flex:1;
+    min-width:250px;
+}
+
+/* Left column */
+.footer-column:first-child{
+    text-align:left;
+}
+
+/* Center column */
+.footer-column:nth-child(2){
+    text-align:center;
+}
+
+/* Right column */
+.footer-column:last-child{
+    text-align:right;
+}
+
+.footer-column h2{
+    font-size:24px;
+    margin-bottom:20px;
+    color:#00c6ff;
+}
+
+.footer-column p{
+    font-size:16px;
+    line-height:1.8;
+    color:#ddd;
+}
+
+/* Quick Links */
+.footer-column ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer-column ul li{
+    margin:12px 0;
+}
+
+.footer-column ul li a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+    font-size:16px;
+}
+
+.footer-column ul li a:hover{
+    color:#00c6ff;
+    padding-left:8px;
+}
+
+/* Contact */
+.footer-column:last-child p{
+    margin:12px 0;
+}
+
+/* Social Icons */
+.social-icons{
+    margin-top:25px;
+}
+
+.social-icons a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    margin-right:12px;
+    border-radius:50%;
+    background:rgba(255,255,255,.12);
+    color:#fff;
+    text-decoration:none;
+    font-size:20px;
+    transition:.4s;
+}
+
+.social-icons a:hover{
+    background:#00c6ff;
+    color:#001f3f;
+    transform:translateY(-8px) rotate(360deg);
+}
+
+/* Bottom */
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.15);
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    font-size:15px;
+    color:#bbb;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:900px){
+
+.footer-container{
+    flex-direction:column;
+    text-align:center;
+}
+
+.footer-column,
+.footer-column:first-child,
+.footer-column:nth-child(2),
+.footer-column:last-child{
+    text-align:center;
+}
+
+.social-icons{
+    justify-content:center;
+}
+
+.social-icons a{
+    margin:8px;
+}
+
+}
+</style>
+
+
+<!-- ==========================
+     JAVASCRIPT
+========================== -->
+<script>
+
+/* ==========================
+   SLIDER
+========================== */
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide() {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+
+    index++;
+    if(index >= slides.length) index = 0;
+}
+
+setInterval(showSlide, 4000);
+
+/* ==========================
+   SCROLL REVEAL
+========================== */
+window.addEventListener("scroll", reveal);
+
+function reveal() {
+    let reveals = document.querySelectorAll(".reveal");
+
+    for(let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        let elementVisible = 150;
+
+        if(elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        }
+    }
+}
+
+/* ==========================
+   COUNTER ANIMATION
+========================== */
+let counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+    counter.innerText = "0";
+
+    let updateCounter = () => {
+        let target = +counter.getAttribute("data-target");
+        let count = +counter.innerText;
+
+        let increment = target / 100;
+
+        if(count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCounter, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCounter();
+});
+
+/* ==========================
+   FORM VALIDATION
+========================== */
+document.getElementById("admissionForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+
+    if(name.length < 3) {
+        alert("Please enter a valid name");
+        return;
+    }
+
+    if(!email.includes("@")) {
+        alert("Please enter a valid email");
+        return;
+    }
+
+    if(phone.length < 10) {
+        alert("Please enter a valid phone number");
+        return;
+    }
+
+    alert("🎉 Application Submitted Successfully!");
+    document.getElementById("admissionForm").reset();
+});
+
+/* ==========================
+   NAV SCROLL EFFECT
+========================== */
+window.addEventListener("scroll", function() {
+    let nav = document.querySelector("nav");
+
+    if(window.scrollY > 50) {
+        nav.style.background = "#ffffff";
+        nav.style.boxShadow = "0 5px 20px rgba(0,0,0,0.15)";
+    } else {
+        nav.style.background = "rgba(255,255,255,0.95)";
+        nav.style.boxShadow = "0 2px 15px rgba(0,0,0,0.1)";
+    }
+});
+
+</script>
+
+</body>
+</html>
