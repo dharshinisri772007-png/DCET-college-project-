@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>College Gallery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/*==========================
+        RESET
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+    overflow-x:hidden;
+}
+nav{
+    background:#003366;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+}
+
+.logo{
+font-size:35px;
+font-weight:bold;
+color:white;
+letter-spacing:1px;
+}
+
+nav h2{
+    margin:0;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;      /* Makes menu items horizontal */
+    gap:25px;           /* Space between items */
+    margin:0;
+    padding:0;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00d4ff;
+}
+
+#themeBtn{
+    padding:8px 12px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+header{
+    background:#003366;
+    font-size: 20px;
+    padding:15px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav h2{
+    color:white;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+#themeBtn{
+    padding:8px 12px;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.gallery-banner{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.gallery-banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*==========================
+      HERO BANNER
+==========================*/
+
+.hero{
+    width:100%;
+    height:400px;
+    min-height: 100vh;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+}
+
+.hero-content{
+    position:relative;
+    color:#0c0c0c;
+    text-align:center;
+    width:80%;
+}
+
+.hero-content h1{
+
+    font-size:60px;
+    margin-bottom:20px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.hero-content p{
+
+    font-size:22px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-content a{
+
+    display:inline-block;
+    text-decoration:none;
+    color:#fff;
+    background:#ff9800;
+    padding:15px 35px;
+    border-radius:40px;
+    font-size:18px;
+    transition:.4s;
+}
+
+.hero-content a:hover{
+
+    background:#0b3d91;
+}
+
+/*==========================
+     INTRO SECTION
+==========================*/
+
+.intro{
+
+    width:90%;
+    max-width:1200px;
+    margin:80px auto;
+}
+
+.intro h2{
+
+    text-align:center;
+    color:#0b3d91;
+    font-size:40px;
+    margin-bottom:25px;
+}
+
+.intro p{
+
+    text-align:justify;
+    font-size:18px;
+    line-height:2;
+    color:#555;
+    margin-bottom:20px;
+}
+
+/*==========================
+   GALLERY HIGHLIGHTS
+==========================*/
+
+.highlights{
+
+    width:100%;
+    padding:80px 0;
+    background:#ffffff;
+}
+
+.highlights h2{
+
+    text-align:center;
+    color:#0647b0;
+    font-size:40px;
+    margin-bottom:60px;
+}
+
+.stats{
+
+    width:90%;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.stat-box{
+
+    background:#c0d8ff;
+    padding:40px 20px;
+    border-radius:15px;
+    text-align:center;
+    transition:.4s;
+}
+
+.stat-box:hover{
+
+    transform:translateY(-10px);
+}
+
+.stat-box h1{
+
+    color:#0b3d91;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.stat-box h3{
+
+    margin-bottom:15px;
+}
+
+.stat-box p{
+
+    color:#000000;
+    line-height:1.8;
+}
+
+/*==========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:768px){
+
+.hero{
+
+height:450px;
+
+}
+
+.hero-content h1{
+
+font-size:40px;
+
+}
+
+.hero-content p{
+
+font-size:17px;
+
+}
+
+.intro h2{
+
+font-size:32px;
+
+}
+
+.highlights h2{
+
+font-size:32px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<header>
+   <nav>
+    <h2>DCET</h2>
+
+    <ul>
+        <li><a href="college app.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="admission.html">Admissions</a></li>
+        <li><a href="department.html">Departments</a></li>
+        <li><a href="placement.html">Placements</a></li>
+        <li><a href="gallery page.html">gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+<div>
+
+</nav>
+</header>
+
+<section class="gallery-banner">
+    <img src="galery.png" alt="College Gallery Banner">
+</section>
+
+<body>
+
+<!--================ HIGHLIGHTS =================-->
+
+<section class="highlights">
+
+<h2>Gallery Highlights</h2>
+
+<div class="stats">
+
+<div class="stat-box">
+
+<h1 class="counter" data-target="5000">5000</h1>
+
+<h3>Campus Photos</h3>
+
+<p>
+
+Beautiful moments captured across classrooms,
+campus, laboratories, hostels and student activities.
+
+</p>
+
+</div>
+
+<div class="stat-box">
+
+<h1 class="counter" data-target="300">200</h1>
+
+<h3>College Events</h3>
+
+<p>
+
+Technical symposiums,
+seminars, workshops,
+guest lectures and exhibitions.
+
+</p>
+
+</div>
+
+<div class="stat-box">
+
+<h1 class="counter" data-target="150">150</h1>
+
+<h3>Cultural Programs</h3>
+
+<p>
+
+Music, dance, drama,
+annual day celebrations,
+talent shows and festivals.
+
+</p>
+
+</div>
+
+<div class="stat-box">
+
+<h1 class="counter" data-target="25">20</h1>
+
+<h3>Graduation Ceremonies</h3>
+
+<p>
+
+Celebrating the achievements
+of graduates as they begin
+their professional careers.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+      GALLERY CATEGORIES
+========================== -->
+
+<section class="categories">
+
+    <h2 class="section-title">Gallery Categories</h2>
+
+    <!-- Campus Infrastructure -->
+    <div class="category-row">
+
+        <div class="category-img">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80">
+        </div>
+
+        <div class="category-text">
+            <h3>Campus Infrastructure</h3>
+
+            <p>
+                Our campus is designed with modern infrastructure including smart classrooms,
+                digital libraries, seminar halls, auditoriums, innovation labs, and eco-friendly
+                spaces that support effective learning and student development.
+            </p>
+
+            <p>
+                The college provides Wi-Fi-enabled zones, well-maintained gardens, advanced IT
+                facilities, spacious laboratories, and comfortable study environments that help
+                students focus on academic excellence and creativity.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Academic Activities -->
+    <div class="category-row reverse">
+
+        <div class="category-img">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80">
+        </div>
+
+        <div class="category-text">
+            <h3>Academic Activities</h3>
+
+            <p>
+                The college regularly conducts guest lectures, workshops, seminars, technical
+                training programs, coding competitions, and research presentations to enhance
+                student knowledge.
+            </p>
+
+            <p>
+                Faculty members encourage project-based learning, industrial collaborations,
+                and innovative thinking to help students stay updated with current industry
+                trends and technologies.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+    /*==========================
+   CATEGORY SECTION
+==========================*/
+
+.categories{
+    width:90%;
+    margin:80px auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    color:#0b3d91;
+    margin-bottom:60px;
+}
+
+/* Row layout */
+.category-row{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    margin-bottom:80px;
+}
+
+/* Reverse layout */
+.category-row.reverse{
+    flex-direction:row-reverse;
+}
+
+/* Image */
+.category-img{
+    flex:1;
+}
+
+.category-img img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Text */
+.category-text{
+    flex:1;
+}
+
+.category-text h3{
+    font-size:32px;
+    color:#0b3d91;
+    margin-bottom:15px;
+}
+
+.category-text p{
+    font-size:17px;
+    line-height:1.9;
+    color:#555;
+    margin-bottom:15px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.category-row,
+.category-row.reverse{
+    flex-direction:column;
+}
+
+.category-img img{
+    height:250px;
+}
+
+.section-title{
+    font-size:32px;
+}
+
+.category-text h3{
+    font-size:24px;
+}
+
+}
+</style>
+<!-- ==========================
+      STUDENT LIFE
+========================== -->
+
+<div class="category-row">
+
+    <div class="category-img">
+        <img src="library.jpg">
+    </div>
+
+    <div class="category-text">
+        <h3>Student Life</h3>
+
+        <p>
+            Student life at our college is dynamic, vibrant, and full of opportunities.
+            Students engage in academic learning, club activities, leadership programs,
+            innovation challenges, and collaborative projects that shape their overall growth.
+        </p>
+
+        <p>
+            Beyond academics, students build friendships, develop communication skills,
+            participate in workshops, attend seminars, and take part in social outreach
+            programs that help them become responsible citizens.
+        </p>
+    </div>
+
+</div>
+
+<!-- ==========================
+      CULTURAL ACTIVITIES
+========================== -->
+
+<div class="category-row reverse">
+
+    <div class="category-img">
+        <img src="culture 1.jpg">
+    </div>
+
+    <div class="category-text">
+        <h3>Cultural Activities</h3>
+
+        <p>
+            Our college celebrates cultural diversity through various events like Annual Day,
+            Freshers Day, Farewell, Ethnic Day, and Talent Shows. Students showcase their
+            talents in dance, music, drama, fashion shows, and fine arts.
+        </p>
+
+        <p>
+            These events promote creativity, confidence, teamwork, and leadership skills while
+            creating unforgettable memories of college life. Cultural programs bring together
+            students from all departments as one family.
+        </p>
+    </div>
+
+</div>
+
+<style>
+    /*==========================
+   OPTIONAL ENHANCEMENTS
+==========================*/
+
+/* Smooth hover effect */
+.category-row:hover .category-img img{
+    transform:scale(1.03);
+    transition:0.4s ease;
+}
+
+.category-img img{
+    transition:0.4s ease;
+}
+
+/* Fade-in animation */
+.category-row{
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp 1s forwards;
+}
+
+.category-row:nth-child(1){
+    animation-delay:0.2s;
+}
+
+.category-row:nth-child(2){
+    animation-delay:0.4s;
+}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+
+<!-- ==========================
+      SPORTS & FITNESS
+========================== -->
+
+<div class="category-row">
+
+    <div class="category-img">
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1600&q=80">
+    </div>
+
+    <div class="category-text">
+        <h3>Sports & Fitness</h3>
+
+        <p>
+            Our college strongly encourages sports and physical fitness. Students actively
+            participate in cricket, football, volleyball, basketball, badminton, athletics,
+            table tennis, and chess at inter-college and state-level competitions.
+        </p>
+
+        <p>
+            Regular sports training, fitness programs, yoga sessions, and annual sports
+            meets help students build discipline, teamwork, leadership, and a healthy
+            lifestyle.
+        </p>
+    </div>
+
+</div>
+
+<!-- ==========================
+      NSS / SOCIAL ACTIVITIES
+========================== -->
+
+<div class="category-row reverse">
+
+    <div class="category-img">
+        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1600&q=80">
+    </div>
+
+    <div class="category-text">
+        <h3>NSS & Social Activities</h3>
+
+        <p>
+            The NSS unit of our college actively engages students in community service,
+            environmental awareness programs, blood donation camps, tree plantation drives,
+            and rural development activities.
+        </p>
+
+        <p>
+            These initiatives help students develop empathy, responsibility, and leadership
+            qualities while contributing positively to society.
+        </p>
+    </div>
+
+</div>
+<style>
+    /*==========================
+   SCROLL REVEAL EFFECT
+==========================*/
+
+.category-row{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 0.8s ease;
+}
+
+.category-row.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Better hover polish */
+.category-img img:hover{
+    transform:scale(1.05);
+    transition:0.4s ease;
+}
+</style>
+<script>
+    //==========================
+// SCROLL REVEAL ANIMATION
+//==========================
+
+const rows = document.querySelectorAll(".category-row");
+
+function revealOnScroll() {
+
+    const triggerBottom = window.innerHeight * 0.85;
+
+    rows.forEach(row => {
+
+        const rowTop = row.getBoundingClientRect().top;
+
+        if (rowTop < triggerBottom) {
+            row.classList.add("show");
+        }
+
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
+
+<!-- ==========================
+      STUDENT MEMORIES
+========================== -->
+
+<section class="memories">
+
+    <h2>Student Memories</h2>
+
+    <p class="memories-text">
+        Every moment in college becomes a lifelong memory. From first-day excitement
+        to graduation pride, our students experience friendships, learning, growth,
+        and unforgettable journeys that shape their future.
+    </p>
+
+    <div class="memory-boxes">
+
+        <div class="memory">
+            <h3>🎓 First Day of College</h3>
+            <p>
+                A mix of excitement and nervousness as students begin their academic journey,
+                meet new friends, and explore campus life for the first time.
+            </p>
+        </div>
+
+        <div class="memory">
+            <h3>🏆 Achievements</h3>
+            <p>
+                Winning competitions, publishing projects, and participating in national-level
+                events create proud and memorable moments for students.
+            </p>
+        </div>
+
+        <div class="memory">
+            <h3>🎉 College Events</h3>
+            <p>
+                Annual day, cultural fest, symposiums, and sports meet bring joy, unity,
+                and unforgettable experiences to campus life.
+            </p>
+        </div>
+
+        <div class="memory">
+            <h3>👨‍🎓 Graduation Day</h3>
+            <p>
+                The most emotional moment where students complete their journey and step
+                into their professional careers with confidence.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+      CALL TO ACTION
+========================== -->
+
+<section class="cta">
+
+    <h2>Join Our College Today</h2>
+
+    <p>
+        Become a part of our vibrant academic community and build your future with
+        quality education, innovation, and opportunities.
+    </p>
+
+        <a href="admission.html" class="btn">Apply Now</a>
+        <a href="contact.html" class="btn">Contact Us</a>
+
+
+</section>
+
+<style>
+    /*==========================
+   STUDENT MEMORIES
+==========================*/
+
+.memories{
+    width:90%;
+    margin:80px auto;
+    text-align:center;
+}
+
+.memories h2{
+    font-size:42px;
+    color:#0b3d91;
+    margin-bottom:15px;
+}
+
+.memories-text{
+    width:80%;
+    margin:0 auto 50px;
+    color:#555;
+    line-height:1.9;
+    font-size:18px;
+}
+
+.memory-boxes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.memory{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.memory:hover{
+    transform:translateY(-10px);
+}
+
+.memory h3{
+    color:#0b3d91;
+    margin-bottom:10px;
+}
+/*==========================
+   CALL TO ACTION
+==========================*/
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px;
+    background-color:rgb(2, 10, 176);
+    color: rgb(255, 254, 254);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+.cta{
+    width:100%;
+    background:rgb(0, 170, 237);
+    color:#fff;
+    text-align:center;
+    padding:80px 20px;
+    margin-top:80px;
+}
+
+.cta h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:30px;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.cta-buttons a{
+    display:inline-block;
+    text-decoration:none;
+    color:#0b3d91;
+    background:#fff;
+    padding:14px 30px;
+    margin:10px;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.cta-buttons a:hover{
+    background:#ff9800;
+    color:#fff;
+}
+
+/*==========================
+   RESPONSIVE
+==========================*/
+
+@media(max-width:768px){
+
+.memories h2,
+.cta h2{
+    font-size:30px;
+}
+
+.video-box iframe{
+    height:250px;
+}
+
+.memories-text,
+.cta p{
+    width:100%;
+}
+
+}
+</style>
+<script>
+    // Smooth scroll for CTA buttons (optional enhancement)
+
+document.querySelectorAll(".cta-buttons a").forEach(btn => {
+    btn.addEventListener("click", function(e){
+        e.preventDefault();
+        alert("This is a demo button. Connect to admission page or contact form.");
+    });
+});
+</script>
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- College Info -->
+        <div class="footer-column">
+            <h2>DCET</h2>
+
+            <p>
+                dharshini College of Engineering and Technology empowers
+                students through innovation, excellence in education, discipline 
+                and professional growth.
+            </p>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div class="social-icons">
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+</div>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h2>Quick Links</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#admission">admission</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#placements">Placements</a></li>
+        <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h2>Contact</h2>
+
+            <p>Chennai, Tamil Nadu</p>
+            <p>+91 98765 43210</p>
+            <p>info@dcet.edu.in</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Dharshini College of Engineering and Technology.
+        All Rights Reserved.
+    </div>
+</footer>
+
+<style>
+   /* ==========================
+   FOOTER
+========================== */
+
+.footer{
+    background: linear-gradient(135deg,#001f3f,#003366);
+    color:#fff;
+    padding:60px 8% 20px;
+    margin-top:60px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:50px;
+}
+
+/* Columns */
+.footer-column{
+    flex:1;
+    min-width:250px;
+}
+
+/* Left column */
+.footer-column:first-child{
+    text-align:left;
+}
+
+/* Center column */
+.footer-column:nth-child(2){
+    text-align:center;
+}
+
+/* Right column */
+.footer-column:last-child{
+    text-align:right;
+}
+
+.footer-column h2{
+    font-size:24px;
+    margin-bottom:20px;
+    color:#00c6ff;
+}
+
+.footer-column p{
+    font-size:16px;
+    line-height:1.8;
+    color:#ddd;
+}
+
+/* Quick Links */
+.footer-column ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer-column ul li{
+    margin:12px 0;
+}
+
+.footer-column ul li a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+    font-size:16px;
+}
+
+.footer-column ul li a:hover{
+    color:#00c6ff;
+    padding-left:8px;
+}
+
+/* Contact */
+.footer-column:last-child p{
+    margin:12px 0;
+}
+
+/* Social Icons */
+.social-icons{
+    margin-top:25px;
+}
+
+.social-icons a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    margin-right:12px;
+    border-radius:50%;
+    background:rgba(255,255,255,.12);
+    color:#fff;
+    text-decoration:none;
+    font-size:20px;
+    transition:.4s;
+}
+
+.social-icons a:hover{
+    background:#00c6ff;
+    color:#001f3f;
+    transform:translateY(-8px) rotate(360deg);
+}
+
+/* Bottom */
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.15);
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    font-size:15px;
+    color:#bbb;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:900px){
+
+.footer-container{
+    flex-direction:column;
+    text-align:center;
+}
+
+.footer-column,
+.footer-column:first-child,
+.footer-column:nth-child(2),
+.footer-column:last-child{
+    text-align:center;
+}
+
+.social-icons{
+    justify-content:center;
+}
+
+.social-icons a{
+    margin:8px;
+}
+
+}
+</style>
+</body>
+</html>
